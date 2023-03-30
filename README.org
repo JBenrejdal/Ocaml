@@ -89,10 +89,9 @@ Commencez par écrire un =README.md= (ou =README.org= si vous aimez [[https://xk
 
 ** Déclaration du binôme
 
-En plus de créer votre dépôt git vous devez créer un ticket de déclaration du
-binôme *TODO URL POUR CREATION DE TICKET*. Donnez vos nom, vos groupes de TP, le lien vers votre dépôt et le lien vers
+En plus de créer votre dépôt git vous devez créer un [[https://gitlab.sorbonne-paris-nord.fr/2023_pripro_projets_public/ocamlwm23/-/issues/new][ticket de déclaration du binôme]]. Donnez vos nom, vos groupes de TP, le lien vers votre dépôt et le lien vers
 votre fichier =README.md= ou =README.org=. Vous pouvez suivre l'exemple donné
-dans le ticket #1 *TODO URL DES TICKETS*.
+dans  [[https://gitlab.sorbonne-paris-nord.fr/2022_pripro_projets_public/ocamlgemini/-/issues/1][le ticket 1]].
 Si vous n'avez pas accès aux tickets ci-dessus pas de panique ! Signalez vous (Mat-
 termost, mail) en donnant votre numéro étudiant et nous vous ouvrions l'accès rapi-
 dement.
