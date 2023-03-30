@@ -9,15 +9,15 @@
 * Introduction
 
 Le but de ce projet est de programmer une preuve de concept pour un gestionnaire
-de fenêtre de type [[https://fr.wikipedia.org/wiki/Gestionnaire_de_fen%C3%AAtres_par_pavage][en mosaïque]] où les fenêtres du bureau sont décrites par un
+de fenêtres [[https://fr.wikipedia.org/wiki/Gestionnaire_de_fen%C3%AAtres_par_pavage][en mosaïque]] où les fenêtres du bureau sont décrites par un
 arbre. En particulier pour permettre un accès rapide à la fenêtre active, on
 utilisera un /zipper/ d'arbre.
 
-Un gestionnaire de fenêtres est un logiciel qui permet d'afficher et d'orga\-niser
+Un gestionnaire de fenêtres est un logiciel qui permet d'afficher et d'organiser
 le placement des fenêtres des différentes applications. Il permet aussi de
 redimensionner les fenêtres, de les réduire ou de maximiser l'une d'elles qui
 occupe alors tout l'écran. Dans le cas des gestionnaires en mosaïque, les
-fenêtre sont organisées comme si l’écran était constitué de pavés. C’est-à-dire
+fenêtres sont organisées comme si l’écran était constitué de pavés. C’est-à-dire
 que les fenêtres ne se superposent pas mais se juxtaposent.
 
 Dans ce projet on veut organiser les fenêtres d'un bureau comme les feuilles
@@ -26,7 +26,7 @@ sous-parties, soit horizontalement soit verticalement, qui peuvent être de
 tailles différentes. Ces deux sous-parties peuvent être elles-mêmes des fenêtres
 ou des divisions.
 
-Parmi toutes les fenêtres affichées, l'une d'entre elle est distinguée. C'est la
+Parmi toutes les fenêtres affichées, l'une d'entre elles est distinguée. C'est la
 fenêtre active, celle qui a le /focus/. C'est celle qui normalement reçoit les
 événements comme les frappes au clavier ou les clics de souris. Nous
 distinguerons la fenêtre active graphiquement par sa bordure qui sera d'une
@@ -37,7 +37,7 @@ représente la fenêtre active.
 Pour simplifier le problème, on ne travaillera pas sur de réelles fenêtres
 d'application pour cette preuve de concept. On dessinera nos fenêtres comme des
 rectangles colorés, identifiées chacune par un nom affichable, sur un canvas
-d'une taille prédéfini. On utilisera la bibliothèque =Graphics= pour gérer
+d'une taille prédéfinie. On utilisera la bibliothèque =Graphics= pour gérer
 l'affichage ainsi que la lecture des frappes clavier.
 
 Votre travail est d'implémenter les fonctions nécessaires pour faire fonctionner
@@ -65,13 +65,16 @@ enseignants dont les identifiants sont =joseph.leroux=, =baptiste.chanus= et =si
 avec un rôle =Maintainer=.
 Vous devez chacun et chacune avoir créé votre paire de clé ssh et avoir déposé la
 clé publique sur le serveur Gitlab (dans votre profill). Vous pouvez définir plusieurs
-clés ssh. nous vous le recommandons en particulier lorsque vous utilisez plusieurs
+clés ssh. Nous vous le recommandons en particulier lorsque vous utilisez plusieurs
 postes de travail, par exemple votre ordinateur personnel et votre compte en salle
 TP.
+
 Tout votre code source devra être déposé en utilisant git dans votre dépôt. Et
-uniquement le code source. Votre dépôt ne doit pas dépasser 1Mo de stockage, réfléchissez bien à ce que vous commitez. Nous lirons votre historique de commits pour
-comprendre votre progression, essayez de faire des messages courts et clairs.
-Pour démarrer avec git, nous vous rappelons quelques commandes de base :
+uniquement le code source. Votre dépôt ne doit pas dépasser 1Mo de stockage,
+réfléchissez bien à ce que vous commitez. Nous lirons votre historique de
+commits pour comprendre votre progression, essayez de faire des messages courts
+et clairs. Pour démarrer avec git, nous vous rappelons quelques commandes de
+base :
 
 | Commandes               | Signification                                                             |
 |-------------------------+---------------------------------------------------------------------------|
@@ -83,18 +86,20 @@ Pour démarrer avec git, nous vous rappelons quelques commandes de base :
 | =git add -u=              | ajouter toutes les modifications de fichiers déjà dans le dépot           |
 
 
-La puissance de git se révèle quand on utilise les branches mais nous n'entrons pas dans le détail pour le moment.
-Commencez par écrire un =README.md= (ou =README.org= si vous aimez [[https://xkcd.com/378/][Emacs]]), dans lequel vous raconterez à quelle étape vous en êtes de votre projet.
+La puissance de git se révèle quand on utilise les branches mais nous n'entrons
+pas dans le détail pour le moment. Commencez par écrire un =README.md= (ou
+=README.org= si vous aimez [[https://xkcd.com/378/][Emacs]]), dans lequel vous raconterez à quelle étape vous
+en êtes de votre projet.
 
 
 ** Déclaration du binôme
 
-En plus de créer votre dépôt git vous devez créer un [[https://gitlab.sorbonne-paris-nord.fr/2023_pripro_projets_public/ocamlwm23/-/issues/new][ticket de déclaration du binôme]]. Donnez vos nom, vos groupes de TP, le lien vers votre dépôt et le lien vers
-votre fichier =README.md= ou =README.org=. Vous pouvez suivre l'exemple donné
-dans  [[https://gitlab.sorbonne-paris-nord.fr/2022_pripro_projets_public/ocamlgemini/-/issues/1][le ticket 1]].
-Si vous n'avez pas accès aux tickets ci-dessus pas de panique ! Signalez vous (Mat-
-termost, mail) en donnant votre numéro étudiant et nous vous ouvrions l'accès rapi-
-dement.
+En plus de créer votre dépôt git vous devez créer un [[https://gitlab.sorbonne-paris-nord.fr/2023_pripro_projets_public/ocamlwm23/-/issues/new][ticket de déclaration du
+binôme]]. Donnez vos nom, vos groupes de TP, le lien vers votre dépôt et le lien
+vers votre fichier =README.md= ou =README.org=. Vous pouvez suivre l'exemple donné
+dans [[https://gitlab.sorbonne-paris-nord.fr/2022_pripro_projets_public/ocamlgemini/-/issues/1][le ticket 1]]. Si vous n'avez pas accès aux tickets ci-dessus pas de panique !
+Signalez vous (Mat- termost, mail) en donnant votre numéro étudiant et nous
+vous ouvrirons l'accès rapidement.
 
 
 * Progression
@@ -134,7 +139,13 @@ Le code comporte le programme =ocamlwm23= dans le répertoire =bin= et des bibli
 - =Tree= qui est /la pièce de résistance/ de ce projet et qui contient toutes les fonctions pour manipuler les arbres binaires et les zippers associés
 - =Wm= qui spécialise le type arbre pour notre cas d'usage
 
-Chaque module contient un fichier d'interface =mli= et un fichier d'implémentation =ml=. Vous ne devez pas modifier les fichiers =mli=. Pour finir cette deuxième partie, vous devez implémenter le module =Color=.
+Chaque module contient un fichier d'interface =mli= et un fichier d'implémentation
+=ml=. Vous ne devez pas modifier les fichiers =mli=. Pour finir la deuxième étape,
+vous devez implémenter le module =Color=. La troisième étape est l'implémentation
+du module =Tree=, la quatrième celle du module =Wm=. La cinquième partie consiste à
+implémenter le gestionnaire lui-même. Bien sûr, rien n'empêche de travailler sur
+plusieurs étapes simultanément, ou de revenir à une étape antérieure afin de
+l'améliorer ou de corriger un bug.
 
 
 ** Design
@@ -176,12 +187,12 @@ Pensez à expliquer comment vous avez implémenter les différentes actions ains
 Vous devez également fournir le mode d'emploi de votre logiciel.
 Ne copiez pas votre code ailleurs, sans le comprendre. En cas de doute de notre
 part sur l'originalité de votre travail nous vous interrogerons à l'oral.
-Nous évaluerons votre travail le 09 mai à partir de 9h heure de Paris. Il faut
+Nous évaluerons votre travail le *10 mai* à partir de *9h heure de Paris*. Il faut
 donc que vous l'ayiez terminé avant.
 Vous pourrez peut-être continuer à l'améliorer ensuite, mais il faudra le signaler
 sur votre ticket de déclaration de binôme et vérifier avec l'enseignant qui vous suivra
 de combien de temps vous disposez. Nous n'évaluerons pas les travaux au delà de la
-date du partiel, le 15 mai.
+date du partiel, le *15 mai*.
 
 Nous sommes là pour vous aider ! N'hésitez pas à poser des questions.
 Cependant, il est fortement recommandé de ne pas vous y prendre au dernier moment.
