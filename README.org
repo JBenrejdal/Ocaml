@@ -81,7 +81,7 @@ base :
 | =git clone url=             | une seule fois pour récupérer le dépot                                    |
 | =git pull=                  | modifier le dépot local avec la version actuellement sur le serveur       |
 | =git add fic=               | pour ajouter un fichier nommé =fic= dans son état actuel au prochain commit |
-| =git commit -m 'message'= | pour effectuer un commit avec le message donné                            |
+| =git commit -m message=   | pour effectuer un commit avec le message donné                            |
 | =git push=                  | pousser sur le serveur vos modifications locales                          |
 | =git add -u=                | ajouter toutes les modifications de fichiers déjà dans le dépot           |
 
