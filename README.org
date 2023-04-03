@@ -121,7 +121,7 @@ Pour compiler tapez simplement la commande suivante.
 dune build
 #+end_src
 
-Les tests unitaires doivent =passer= sans erreur avec la commande:
+Les tests unitaires doivent /passer/ sans erreur avec la commande:
 
 #+begin_src bash
 dune runtest
