@@ -57,17 +57,17 @@ mais vous ne serez suivi par un enseignant de l'un des deux groupes.
 
 ** Votre dépôt git sur le gitlab
 
-Vous devez ensuite créer un dépot *privé* sur ce Gitlab vous pourrez toujours
-changer de serveur remote une fois le projet terminé. Vous pouvez choisir librement
-son nom mais nous vous recommandons d'utiliser au moins le texte "window-manager-zipper"
-dans celui-ci. Ses membres doivent être les deux membres de votre binôme et les trois
-enseignants dont les identifiants sont =joseph.leroux=, =baptiste.chanus= et =simon.mirwasser=
-avec un rôle =Maintainer=.
-Vous devez chacun et chacune avoir créé votre paire de clé ssh et avoir déposé la
-clé publique sur le serveur Gitlab (dans votre profill). Vous pouvez définir plusieurs
-clés ssh. Nous vous le recommandons en particulier lorsque vous utilisez plusieurs
-postes de travail, par exemple votre ordinateur personnel et votre compte en salle
-TP.
+Vous devez ensuite créer un dépot *privé* sur ce Gitlab en cliquant sur /Fork/ (en
+anglais) ou /Créer une divergence/ (en français). Vous pouvez choisir librement
+son nom mais nous vous recommandons d'utiliser au moins le texte
+"window-manager-zipper" dans celui-ci. Ses membres doivent être les deux membres
+de votre binôme et les trois enseignants dont les identifiants sont
+=joseph.leroux=, =baptiste.chanus= et =simon.mirwasser= avec un rôle =Maintainer=. Vous
+devez chacun et chacune avoir créé votre paire de clé ssh et avoir déposé la clé
+publique sur le serveur Gitlab (dans votre profill). Vous pouvez définir
+plusieurs clés ssh. Nous vous le recommandons en particulier lorsque vous
+utilisez plusieurs postes de travail, par exemple votre ordinateur personnel et
+votre compte en salle TP.
 
 Tout votre code source devra être déposé en utilisant git dans votre dépôt. Et
 uniquement le code source. Votre dépôt ne doit pas dépasser 1Mo de stockage,
