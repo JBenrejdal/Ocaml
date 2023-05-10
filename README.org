@@ -18,7 +18,7 @@ Voici une liste des opérations possibles et leur commande.
 
 | Commandes                 | Signification                                                             |
 |---------------------------+---------------------------------------------------------------------------|
-| =h=             | permet de créer une fenêtre horizontale depuis l’emplacement de la fenêtre courante       |                                 |
+| =h=             | permet de créer une fenêtre horizontale depuis l’emplacement de la fenêtre courante      |                                 |
 | =v=                  | permet de créer une fenêtre horizontale depuis l’emplacement de la fenêtre courante      |
 | =n=               | permet de déplacer le focus sur la fenêtre suivante |
 | =p=   | permet de déplacer le focus sur la fenêtre precedente                           |
