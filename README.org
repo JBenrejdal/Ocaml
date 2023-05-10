@@ -6,7 +6,6 @@
 #+OPTIONS: toc:nil lang:fr
 
 
-*Introduction
 
 Nous avons réalisé le projet dans son intégralité. Le projet fonctionne comme il le devrait et tous les tests sont concluants.
 
@@ -28,7 +27,7 @@ Voici une liste des opérations possibles et leur commande.
 | =r=                | permet de supprimer la fenêtre courante           |
 | =q=                | permet de quitter le programme et d'afficher le nombre de fenêtres crées           |
 
-*Implémentation
+* Implémentation
 
 Concernant les fichiers wm.ml, color.ml et tree.ml nous avons dans un premier temps
 procédé de façon graphique c’est-à-dire par des applications des différentes fonctions a des
