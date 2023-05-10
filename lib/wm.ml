@@ -20,7 +20,6 @@ let draw_win w coord (bc:Color.t) =
 
 
   (** Draw window border *)
-  
   let (r, g, b) = Color.to_rgb bc in
   set_color (rgb r g b);
   set_line_width 5;
@@ -32,7 +31,7 @@ let draw_win w coord (bc:Color.t) =
 
   (*** Draw window title *)
   set_color black;
-  
+
   let text_x = px + sx/2 - 20 in
   let text_y = py + sy - 20 in
   moveto (text_x) (text_y);
@@ -63,7 +62,7 @@ let rec draw_wmtree bc wt = match wt with
 let  draw_wmzipper bc wz =  match wz with
   |Tree.TZ(_,t)->draw_wmtree bc t
   
-       
+(** Fonction qui prend en parametre des coordonne et un Split et envoie un couple de coordonnee*)       
 let split_coord (Coord {px=x; py=y; sx=w; sy=h}) (Split(d, r))  = match d with
     | Horizontal ->
       let lw = int_of_float ((float_of_int w) *. r) in

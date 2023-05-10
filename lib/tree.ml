@@ -100,6 +100,8 @@ let go_down (TZ(c,t):('v,'w)z) = match t with
 | Leaf _ -> None
 | Node(n,l , r) -> Some (TZ(LNContext(n, c, r), l))
 
+(** go_down z return optional zipper like z where the focus is the right subtree *)
+
 let go_down_r (TZ(c,t):('v,'w)z) = match t with
 | Leaf _ -> None
 | Node(n,l , r) -> Some (TZ(RNContext(l, n, c), r))
@@ -292,7 +294,7 @@ let%test "mv2" =
   | Some z -> Stdlib.(z = TZ (LNContext ("five", Top,Leaf 3),Node("four", Leaf 1, Leaf 2)))
 
 
-
+(**fonction qui prend en parametre un Zipper et qui renvoie un zipper en option qui a la prochaine feuille a droite*)
   let rec go_topr(TZ(c,t)) = match  go_up  (TZ(c,t)) with
   |None -> None
   |Some z -> match go_right z with
@@ -328,7 +330,8 @@ let%test "nl3" =
   match Option.(Some z >>= next_leaf >>= next_leaf >>= next_leaf) with
   | None -> true
   | _ -> false
-
+  
+(**fonction qui prend en parametre un Zipper et qui renvoie un zipper en option qui a la feuille precedente a gauche*)
 let rec go_topl(TZ(c,t)) = match go_up (TZ(c,t)) with
   |None -> None
   |Some z -> match go_left (z) with
