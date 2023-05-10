@@ -27,7 +27,7 @@ let main () =
   (* create the canvas to draw windows *)
   let f = Printf.sprintf " %dx%d" width height in
   let () = Graphics.open_graph f in
-
+  (*La fonction recup permet de recuperer le sous-arbre associé à un zipper donné*)
   let recup = fun (Tree.TZ(_,t))-> t in
 
 

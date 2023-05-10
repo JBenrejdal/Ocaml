@@ -29,8 +29,11 @@ Voici une liste des opérations possibles et leur commande.
 
 * Implémentation
 
-Concernant les fichiers wm.ml, color.ml et tree.ml nous avons dans un premier temps
-procédé de façon graphique c’est-à-dire par des applications des différentes fonctions a des
+Les fichiers =wm.ml=, =color.ml= et =tree.ml= nous avons dans un premier temps
+procédé de façon graphique c’est-à-dire par des applications des différentes fonctions à des
 cas particuliers afin d’en déduire la meilleure méthode pour les implémenter.
-Nous avons utilisé les fonctions des 3 fichiers cité précédemment et nous avons utilisé des
-monades pour encapsuler ces fonctions issues de ces fichiers.
+Concernant le =main.ml= nous avons utilisé les fonctions des 3 fichiers cité précédemment et nous avons utilisé des
+monades car nous avons trouvé que c'était le moyen le plus simple pour implémenter le gestionnaire.
+Les commentaires étant établi dans les fichiers =.mli=, les fichiers =color=, =tree= et =wm= ne contiennent très peu de commentaires car les fonctions sont explicites pour la plupart.
+Toutefois, nous avons rajouté quelques commentaires au fichier =main.ml= car il est plus délicat à comprendre.
+

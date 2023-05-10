@@ -32,8 +32,8 @@ let draw_win w coord (bc:Color.t) =
   (*** Draw window title *)
   set_color black;
 
-  let text_x = px + sx/2 - 20 in
-  let text_y = py + sy - 20 in
+  let text_x = px + sx/2  in
+  let text_y = py + sy/2 in
   moveto (text_x) (text_y);
   draw_string title;
 
@@ -53,8 +53,10 @@ let change_coord c wt = match wt with
 
 
 let rec draw_wmtree bc wt = match wt with
+  (*Si c'est une feuille alors on dessine la fenêtre*)
   | Tree.Leaf (win, coord) ->
   draw_win win coord bc
+  (*Sinon, on rapelle la fonction avec le sous-arbre gauche et le sous arbre droit respectivement*)
   | Tree.Node ((_, _), left, right) ->
   draw_wmtree bc left;
   draw_wmtree bc right
@@ -64,11 +66,13 @@ let  draw_wmzipper bc wz =  match wz with
   
 (** Fonction qui prend en parametre des coordonne et un Split et envoie un couple de coordonnee*)       
 let split_coord (Coord {px=x; py=y; sx=w; sy=h}) (Split(d, r))  = match d with
+    (*Si la direction de la division est hozizontale*)
     | Horizontal ->
       let lw = int_of_float ((float_of_int w) *. r) in
       let lc = Coord {px=x; py=y; sx=lw; sy=h} in
       let rc = Coord {px=x+lw; py=y; sx=int_of_float ((float_of_int w) *. (1.-.r)); sy=h} in
       (lc, rc)
+    (*Si la direction de la division est verticale*)
     | Vertical ->
       let lh = int_of_float ((float_of_int h) *. r) in
       let lc = Coord {px=x; py=y; sx=w; sy=lh} in
@@ -78,6 +82,7 @@ let split_coord (Coord {px=x; py=y; sx=w; sy=h}) (Split(d, r))  = match d with
 let rec update_coord (c:coordinate) (t:wmtree) = match t with 
     | Tree.Leaf (w, _) -> Tree.Leaf (w, c)
     | Tree.Node ((s,_), l, r) ->
+        (*On appelle la fonction split pour séparer et calculer les coordonnées, puis on rappelle la fonction récursivement*)
         let (lc, rc):(coordinate*coordinate) = split_coord c s in
         Tree.Node ((s,c), update_coord lc l, update_coord rc r)
      
